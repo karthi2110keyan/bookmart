@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bookpage.css">
+    <title>BLACK FOREST</title>
+</head>
+<body>
+       
+ <header class="header">
+   
+  <section>
+    
+      <label for="">Book Mart</label>
+      <p id="store">0</p>
+     <a href=""><img class="carticon" src="Shopping-Cart-Icons35.webp" alt="" width="100 height100"></a>
+             
+       <button class="menu-item">
+         <div class="menu-bar" onclick="myMenu()"></div>
+       </button>
+    </section>
+
+ </header>
+
+
+       <nav id="my">
+        <ul class="unlist">
+           <li><a href="bookbuy.html">Home</a></li>
+           <li><a href="">About</a></li>
+           <li><a href="">Login</a></li>
+           <li><a href="">My Order</a></li>
+           
+        </ul>
+     </nav>
+      
+           
+      <main>
+        
+         <img class="bookimage" src="image/images (10).jpeg" alt="" width="100" height="100">
+
+         <h3>    BLACK FOREST</h3>
+
+         <h5 class="amount-price">-300 <span>₹</span></h5>
+
+         <h5 class="des">Description</h5>
+        <p class="para">
+         
+           Near a small farming village, there is a forest with black trees. The leaves never grow, and the trees never die. The villagers say it's cursed, but the legends are old and mostly ignored.<br>
+          <br>
+
+           Monty's family farm is right on the edge of the black forest. He's nineteen, and he's grown out of his fear of the woods.  His younger sister Terra...not so much.
+           <br><br>
+           <span id="point">...</span>
+           <span id="hide"> But one day, something calls her to the woods. And after Monty finds her and has her swear to never tell anyone she went inside, people in their village begin to die. One by one. Their living bodies shrivel and turn black.<br>
+           <br>
+          
+            Monty fears that something has escaped the black forest. Something that wants to kill them all. He has no idea what to do. No one believes him.
+          
+            And time is running out.</span> 
+            <button class="btt" id=" buttontext" onclick="seeMore()" >show more</button>
+        </p>
+
+       
+        <ul class="itembuy">
+            <li class="first">
+              <span class="quan"> Quantity:&nbsp;&nbsp;&nbsp;</span>
+                <select id="quantity">
+                    <option  value="1" onclick="price()">1</option>
+                    <option  value="2" onclick="price()">2</option>
+                    <option  value="3" onclick="price()">3</option>
+                    <option  value="4" onclick="price()">4</option>
+                    <option  value="5" onclick="price()">5</option>
+                </select>
+            </li>
+               <li class="second">
+                <button id="Cart" class="item" href="" value="1" onclick="cartion()">Cart</button>
+              </li>
+               <li class="second">
+                <button class="item" href="">Buy</button>
+              </li>
+       </ul>
+         
+           
+         
+        
+      </main>
+
+      delivary
+      
+
+      
+            
+<script>
+
+    function myMenu() {
+    var x=document.getElementById("my");
+   
+    if(x.style.display === "block")
+    {
+      x.style.display = "none";
+   
+    }
+    else{
+      x.style.display = "block";
+    }
+   }
+   
+   function cartion(){
+   
+   var q=document.getElementById("quantity")
+    var result=document.getElementById("store")
+   qvalue=q.value
+   resultvalue=result.value
+   var total = qvalue * 1;
+    result.textContent=total
+
+  }
+
+  function viewcart(){
+    var cart_items=document.getElementById("")
+  }
+  function seeMore(){
+    var see=document.getElementById("point");
+    var showmore=document.getElementById("hide");
+    var buttonon=document.getElementById("buttontext")
+    if(see.style.display==="none"){
+      showmore.style.display="none";
+      see.style.display ="inline";
+      buttonon.innerHTML ="show more";
+    }
+    else{
+      showmore.style.display="inline";
+      see.style.display ="none";
+      buttonon.innerHTML ="show less";
+    }
+  }
+      
+   </script>
+    
+    
+</body>
+</html>
